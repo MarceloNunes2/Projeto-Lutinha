@@ -1,0 +1,119 @@
+:root {
+    --background-color: #2c3e50;
+    --char-color: #16a085;
+    --monster-color: #c0392b;
+    --lifebar-color: #f1c40f;
+    --button-color: #2980b9;
+    --button-color-hover: #3498db;
+}
+
+/* Estilizando a página inteira */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+}
+
+
+/* Estilizando a área de batalha */
+.fightarea {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+
+
+
+/* Estilizando os personagens */
+#char, #monster {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#char {
+    border: 5px solid var(--char-color);
+}
+
+#monster {
+    border: 5px solid var(--monster-color);
+}
+
+/* Estilizando as barras de vida */
+.lifebar {
+    position: relative;
+    width: 80%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--lifebar-color);
+    border-radius: 20px;
+    transition: width 0.2s ease-in-out;
+}
+
+/* Estilizando os botões de ataque */
+.attackbutton {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.attackbutton:hover {
+    background-color: var(--button-color-hover);
+}
+
+/* Estilizando o log de batalha */
+.log {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    padding: 10px;
+    list-style: none;
+    overflow-y: scroll;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.log li {
+    margin-bottom: 10px;
+}
+
+/* Efeito de carregando */
+#loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    background-color: var(--background-color);
+    z-index: 999;
+}
